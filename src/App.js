@@ -1,9 +1,7 @@
+import LoginPage from "./components/pages/login/LoginPage";
+
 function App() {
-  return (
-    <div className="App">
-      <h1>Crazee Burger</h1>
-    </div>
-  );
+  return <LoginPage />;
 }
 
 export default App;
