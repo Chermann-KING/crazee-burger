@@ -14,7 +14,6 @@ export default function LoginForm() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert(`Bonjour ${inputText} !`);
     setInputText("");
     // forcer la navigation vers la OrderPage
     navigate(`/order/${inputText}`);
