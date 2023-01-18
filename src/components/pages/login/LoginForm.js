@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   // state (état, données)
   const [inputText, setInputText] = useState("");
+  // useNavigate() est un hook de react-router-dom permettant de forcer la navigation dans ce cas-ci
+  const navigate = useNavigate();
 
   // comportement (fonctions)
   const handleChange = (e) => {
@@ -11,8 +14,9 @@ export default function LoginForm() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Bonjour ${inputText} !`);
     setInputText("");
+    // forcer la navigation vers la OrderPage
+    navigate(`/order/${inputText}`);
   };
 
   // affichage (JSX)
