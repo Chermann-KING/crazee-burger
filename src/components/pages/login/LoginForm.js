@@ -3,8 +3,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme/theme";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
+import InputText from "../../hoc/InputText";
+import { BsPersonCircle } from "react-icons/bs";
 
 export default function LoginForm() {
   // state (état, données)
@@ -33,16 +34,13 @@ export default function LoginForm() {
       </div>
 
       <div className="cta-form">
-        <div className="input-wrapper">
-          <BsPersonCircle className="icon" />
-          <input
-            onChange={handleChange}
-            value={inputText}
-            type="text"
-            placeholder="Entrez votre prénom"
-            required
-          />
-        </div>
+        <InputText
+          value={inputText}
+          onChange={handleChange}
+          placeholder={"Entrez votre prénom"}
+          required
+          Icon={<BsPersonCircle className="icon" />}
+        />
 
         <button type="submit">
           Accéder à mon espace <IoChevronForward />
@@ -92,37 +90,6 @@ const LoginFormStyled = styled.form`
     align-items: center;
 
     gap: ${theme.spacing.sm};
-
-    .input-wrapper {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: ${theme.spacing.md};
-      padding: ${theme.spacing.md};
-      border-radius: ${theme.borderRadius.round};
-      background-color: ${theme.colors.white};
-
-      .icon {
-        color: ${theme.colors.greySemiDark};
-      }
-      input[type="text"] {
-        background-color: transparent;
-        font-size: ${theme.fonts.P0};
-        border-radius: ${theme.borderRadius.round};
-        border: 0.5px solid ${theme.colors.white};
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-        outline: none;
-        width: 100%;
-
-        ::placeholder {
-          color: ${theme.colors.greyMedium};
-        }
-        :focus {
-          border: 0.5px solid ${theme.colors.greyBlue};
-        }
-      }
-    }
 
     button {
       cursor: pointer;
