@@ -6,6 +6,7 @@ import { theme } from "../../../theme/theme";
 import { IoChevronForward } from "react-icons/io5";
 import InputText from "../../hoc/InputText";
 import { BsPersonCircle } from "react-icons/bs";
+import Button from "../../hoc/Button";
 
 export default function LoginForm() {
   // state (état, données)
@@ -41,10 +42,7 @@ export default function LoginForm() {
           required
           Icon={<BsPersonCircle className="icon" />}
         />
-
-        <button type="submit">
-          Accéder à mon espace <IoChevronForward />
-        </button>
+        <Button label={"Accéder à mon espace"} Icon={<IoChevronForward />} />
       </div>
     </LoginFormStyled>
   );
@@ -90,28 +88,5 @@ const LoginFormStyled = styled.form`
     align-items: center;
 
     gap: ${theme.spacing.sm};
-
-    button {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: ${theme.spacing.md};
-      border-radius: ${theme.borderRadius.round};
-      background-color: ${theme.colors.primary_burger};
-      padding: ${theme.spacing.md} 0;
-      width: 100%;
-      color: ${theme.colors.white};
-      font-weight: ${theme.weights.bold};
-      letter-spacing: 0.1rem;
-      :hover {
-        background-color: ${theme.colors.white};
-        padding: 19px 0;
-        color: ${theme.colors.primary_burger};
-        border: 0.5px solid ${theme.colors.primary_burger};
-        -webkit-transition: 0.1s;
-        transition: 0.1;
-      }
-    }
   }
 `;
