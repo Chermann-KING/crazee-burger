@@ -53,13 +53,25 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
+  z-index: 1;
+  width: 30vw;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  font-family: "Amatic SC", cursive;
+  color: ${theme.colors.white};
 
   gap: ${theme.spacing.md};
 
+  .header-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .header-form h2 {
     font-size: ${theme.fonts.P5};
   }
@@ -67,22 +79,26 @@ const LoginFormStyled = styled.form`
     font-size: ${theme.fonts.P4};
   }
   hr {
-    border: 2.5px solid ${theme.colors.primary_burger};
+    border-top: 2.5px solid ${theme.colors.primary_burger};
     border-radius: ${theme.borderRadius.subtle};
     margin: ${theme.spacing.md} 0;
+    width: 100%;
   }
 
   .cta-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     gap: ${theme.spacing.sm};
 
     .input-wrapper {
+      width: 100%;
       display: flex;
       align-items: center;
       gap: ${theme.spacing.md};
-      padding: ${theme.spacing.md} ${theme.spacing.xl};
+      padding: ${theme.spacing.md};
       border-radius: ${theme.borderRadius.round};
       background-color: ${theme.colors.white};
 

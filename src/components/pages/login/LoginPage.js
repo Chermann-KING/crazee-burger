@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 export default function LoginPage() {
   return (
     <LoginPageStyled>
+      <div className="filter"></div>
       <header className="header">
         <Link to="/">
           <h1>
@@ -40,7 +41,15 @@ const LoginPageStyled = styled.div`
 
   gap: ${theme.spacing.xxl};
 
+  .filter {
+    position: absolute;
+    opacity: 0.8;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+  }
   .header {
+    z-index: 1;
     width: min-content;
 
     h1 {
@@ -59,9 +68,5 @@ const LoginPageStyled = styled.div`
         height: auto;
       }
     }
-  }
-  form {
-    font-family: "Amatic SC", cursive;
-    color: white;
   }
 `;
