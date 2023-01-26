@@ -1,7 +1,7 @@
 import React from "react";
 import LoginForm from "./LoginForm";
 import styled from "styled-components";
-import imageBG from "../../../assets/images/burger-background.jpg";
+import imageBG from "../../../assets/images/burger-background.webp";
 import { theme } from "../../../theme/theme";
 import Logo from "../../hoc/Logo";
 

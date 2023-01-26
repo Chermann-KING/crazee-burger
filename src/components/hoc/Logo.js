@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme/theme";
-import logo from "../../assets/images/logo-orange.png";
+import logo from "../../assets/images/logo-orange.webp";
 
 export default function Logo() {
   return (
