@@ -29,12 +29,11 @@ const LogoStyled = styled.div`
     justify-content: center;
 
     font-family: "Amatic SC", cursive;
-    font-size: clamp(68px, 8vw, 6rem);
+    font-size: calc(${theme.fonts.P6}*1.9);
     color: ${theme.colors.primary_burger};
 
     img {
-      width: 14vw;
-      min-width: 120px;
+      width: 239px;
       height: auto;
     }
   }
