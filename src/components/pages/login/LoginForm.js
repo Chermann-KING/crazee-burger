@@ -7,6 +7,7 @@ import { IoChevronForward } from "react-icons/io5";
 import InputText from "../../hoc/InputText";
 import { BsPersonCircle } from "react-icons/bs";
 import Button from "../../hoc/Button";
+import HeaderForm from "./HeaderForm";
 
 export default function LoginForm() {
   // state (état, données)
@@ -28,11 +29,7 @@ export default function LoginForm() {
   // affichage (JSX)
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
-      <div className="header-form">
-        <h2>Bienvenue chez nous !</h2>
-        <hr />
-        <h3>Connectez-vous</h3>
-      </div>
+      <HeaderForm />
 
       <div className="cta-form">
         <InputText
@@ -59,25 +56,6 @@ const LoginFormStyled = styled.form`
   color: ${theme.colors.white};
 
   gap: ${theme.spacing.md};
-
-  .header-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-form h2 {
-    font-size: ${theme.fonts.P5};
-  }
-  .header-form h3 {
-    font-size: ${theme.fonts.P4};
-  }
-  hr {
-    border-top: 2.5px solid #f56a2c;
-    border-radius: ${theme.borderRadius.subtle};
-    margin: ${theme.spacing.lg} 0;
-    width: 100%;
-  }
 
   .cta-form {
     width: 100%;
