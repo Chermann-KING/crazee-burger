@@ -33,7 +33,7 @@ const LoginPageStyled = styled.div`
 
   .filter {
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.4;
     background-color: black;
     height: 100%;
     width: 100%;

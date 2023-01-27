@@ -50,8 +50,6 @@ export default function LoginForm() {
 
 const LoginFormStyled = styled.form`
   z-index: 1;
-  width: 30vw;
-  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,9 +73,9 @@ const LoginFormStyled = styled.form`
     font-size: ${theme.fonts.P4};
   }
   hr {
-    border-top: 2.5px solid ${theme.colors.primary_burger};
+    border-top: 2.5px solid #f56a2c;
     border-radius: ${theme.borderRadius.subtle};
-    margin: ${theme.spacing.md} 0;
+    margin: ${theme.spacing.lg} 0;
     width: 100%;
   }
 

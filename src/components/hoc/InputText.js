@@ -16,7 +16,7 @@ export default function InputText({ value, onChange, Icon, ...others }) {
   );
 }
 const InputTextStyled = styled.div`
-  width: 100%;
+  width: 400px;
   display: flex;
   align-items: center;
   gap: ${theme.spacing.md};
