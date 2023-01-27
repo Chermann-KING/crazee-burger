@@ -4,26 +4,26 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme/theme";
 import { IoChevronForward } from "react-icons/io5";
-import InputText from "../../hoc/InputText";
+import TextInput from "../../hoc/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
 import Button from "../../hoc/Button";
 import HeaderForm from "./HeaderForm";
 
 export default function LoginForm() {
   // state (état, données)
-  const [inputText, setInputText] = useState("");
+  const [textInput, setTextInput] = useState("");
   // useNavigate() est un hook de react-router-dom permettant de forcer la navigation dans ce cas-ci
   const navigate = useNavigate();
 
   // comportement (fonctions)
   const handleChange = (e) => {
-    setInputText(e.target.value);
+    setTextInput(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setInputText("");
+    setTextInput("");
     // forcer la navigation vers la OrderPage
-    navigate(`/order/${inputText}`);
+    navigate(`/order/${textInput}`);
   };
 
   // affichage (JSX)
@@ -32,8 +32,8 @@ export default function LoginForm() {
       <HeaderForm />
 
       <div className="cta-form">
-        <InputText
-          value={inputText}
+        <TextInput
+          value={textInput}
           onChange={handleChange}
           placeholder={"Entrez votre prénom"}
           required

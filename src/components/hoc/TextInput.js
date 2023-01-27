@@ -2,20 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme/theme";
 
-export default function InputText({ value, onChange, Icon, ...others }) {
+export default function TextInput({ value, onChange, Icon, ...others }) {
   // state (état, données)
 
   // comportement (fonctions)
 
   // affichage (JSX)
   return (
-    <InputTextStyled>
+    <TextInputStyled>
       {Icon && Icon}
       <input onChange={onChange} value={value} type="text" {...others} />
-    </InputTextStyled>
+    </TextInputStyled>
   );
 }
-const InputTextStyled = styled.div`
+const TextInputStyled = styled.div`
   width: 400px;
   display: flex;
   align-items: center;
