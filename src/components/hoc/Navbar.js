@@ -19,6 +19,7 @@ export default function Navbar() {
       <div className="brand">
         <Logo className="scale-logo" />
       </div>
+
       <div className="user">
         <div className="is-connected">
           <p>
@@ -28,6 +29,7 @@ export default function Navbar() {
             <button>Se déconnecter</button>
           </Link>
         </div>
+
         <div className="profil-pic">
           <BsPersonCircle />
         </div>
@@ -37,22 +39,34 @@ export default function Navbar() {
 }
 
 const NavbarStyled = styled.nav`
-  border: 5px solid red;
+  /* border: 5px solid red; */
   background-color: yellow;
 
-  height: 10vh;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .brand {
+    /* flex: 1; */
     /* général style of braingin */
-    border: 5px solid green;
+    /* border: 5px solid green; */
     .scale-logo {
-      transform: scale(0.3);
+      border: 5px solid black;
+
+      /* transform: scale(0.3); */
     }
   }
   .user {
-    border: 5px solid blue;
+    /* flex: 3; */
+    /* border: 5px solid blue; */
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    .profil-pic {
+      justify-self: flex-end;
+    }
   }
 `;
