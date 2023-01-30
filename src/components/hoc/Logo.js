@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme/theme";
-import logo from "../../assets/images/logo-orange.webp";
+import picto from "../../assets/images/logo-orange.webp";
 
-export default function Logo() {
+export default function Logo({ className }) {
   return (
     <LogoStyled>
       <Link to="/">
-        <h1>
+        <h1 className={className}>
           Crazee
-          <img src={logo} alt="" aria-hidden="true" />
+          <img src={picto} alt="" aria-hidden="true" />
           Burger
         </h1>
       </Link>
