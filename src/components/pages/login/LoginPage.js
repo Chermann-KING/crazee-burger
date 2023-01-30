@@ -9,7 +9,7 @@ export default function LoginPage() {
   return (
     <LoginPageStyled>
       <div className="filter"></div>
-      <Logo />
+      <Logo className="scale-logo" />
       <LoginForm />
     </LoginPageStyled>
   );
@@ -31,6 +31,9 @@ const LoginPageStyled = styled.div`
 
   gap: ${theme.spacing.xxl};
 
+  .scale-logo {
+    transform: scale(3.4);
+  }
   .filter {
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
