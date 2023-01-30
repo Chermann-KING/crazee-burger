@@ -29,13 +29,14 @@ const LogoStyled = styled.div`
     justify-content: center;
 
     font-family: "Amatic SC", cursive;
-    font-size: calc(${theme.fonts.P6}*1.9);
+    font-size: calc(${theme.fonts.P6}*.5);
     color: ${theme.colors.primary_burger};
 
     img {
-      width: 239px;
+      /* width: 239px; */
+      width: 60px;
       height: auto;
-      margin: 0 1rem;
+      margin: 0 0.2rem;
     }
   }
 `;
