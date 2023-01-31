@@ -5,6 +5,7 @@ export default function Main() {
   return <MainStyled></MainStyled>;
 }
 const MainStyled = styled.main`
+  background-color: #f5f5f7;
   height: 88vh;
   width: 100%;
 
