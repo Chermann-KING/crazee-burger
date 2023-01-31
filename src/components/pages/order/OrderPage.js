@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../hoc/Navbar";
+import Main from "./Main";
 
 export default function OrderPage() {
   // State (état, données)
@@ -10,6 +11,7 @@ export default function OrderPage() {
   return (
     <div>
       <Navbar />
+      <Main />
     </div>
   );
 }
