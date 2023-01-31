@@ -1,19 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme/theme";
 import picto from "../../assets/images/logo-orange.webp";
 
 export default function Logo({ className }) {
+  const reload = () => {
+    window.location.reload();
+  };
+
   return (
     <LogoStyled>
-      <Link to="/">
-        <h1 className={className}>
-          Crazee
-          <img src={picto} alt="" aria-hidden="true" />
-          Burger
-        </h1>
-      </Link>
+      {/* <Link to="/"> */}
+      <h1 className={className} onClick={reload}>
+        Crazee
+        <img src={picto} alt="" aria-hidden="true" />
+        Burger
+      </h1>
+      {/* </Link> */}
     </LogoStyled>
   );
 }
