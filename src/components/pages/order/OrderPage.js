@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+import { theme } from "../../../theme/theme";
 import Navbar from "../../hoc/Navbar";
 import Main from "./Main";
 
@@ -9,9 +11,14 @@ export default function OrderPage() {
 
   // Affichage (JSX)
   return (
-    <div>
+    <OrderPageStyled>
       <Navbar />
       <Main />
-    </div>
+    </OrderPageStyled>
   );
 }
+const OrderPageStyled = styled.div`
+  height: 100vh;
+  padding: 1rem 3rem;
+  background-color: ${theme.colors.primary_burger};
+`;
