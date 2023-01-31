@@ -46,6 +46,7 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  border-radius: 15px 15px 0 0;
 
   .user {
     display: flex;
