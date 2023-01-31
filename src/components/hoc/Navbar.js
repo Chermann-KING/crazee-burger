@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link, useParams } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
 import Logo from "../hoc/Logo";
+import { theme } from "../../theme/theme";
 
 export default function Navbar() {
   // State (état, données)
@@ -30,43 +31,52 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="profil-pic">
-          <BsPersonCircle />
-        </div>
+        <BsPersonCircle className="icon" />
       </div>
     </NavbarStyled>
   );
 }
 
 const NavbarStyled = styled.nav`
-  /* border: 5px solid red; */
-  background-color: yellow;
+  cursor: default;
+  background-color: ${theme.colors.white};
 
   height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
 
-  .brand {
-    /* flex: 1; */
-    /* général style of braingin */
-    /* border: 5px solid green; */
-    .scale-logo {
-      border: 5px solid black;
-
-      /* transform: scale(0.3); */
-    }
-  }
   .user {
-    /* flex: 3; */
-    /* border: 5px solid blue; */
-
     display: flex;
     align-items: center;
     gap: 1.2rem;
 
-    .profil-pic {
-      justify-self: flex-end;
+    .is-connected {
+      text-align: right;
+      p > span {
+        color: ${theme.colors.primary_burger};
+        font-weight: ${theme.weights.bold};
+      }
+      button {
+        cursor: pointer;
+        color: ${theme.colors.greyDark};
+        background-color: transparent;
+        border: none;
+        margin-top: ${theme.spacing.xxs};
+        padding: ${theme.spacing.xxs} 0;
+        border-bottom: 1px solid transparent;
+
+        transition: all 0.2s ease;
+        :hover {
+          border-bottom: 1px solid ${theme.colors.greyDark};
+        }
+      }
+    }
+    .icon {
+      width: 36px;
+      height: auto;
+      color: ${theme.colors.greyDark};
     }
   }
 `;
