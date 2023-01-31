@@ -6,7 +6,8 @@ export default function Main() {
 }
 const MainStyled = styled.main`
   background-color: #f5f5f7;
-  height: 88vh;
+  /* overflow-y: scroll; */
+  height: 82vh;
   width: 100%;
 
   display: flex;
