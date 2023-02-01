@@ -17,9 +17,7 @@ export default function Navbar() {
 
   return (
     <NavbarStyled>
-      <div className="brand">
-        <Logo className="scale-logo" />
-      </div>
+      <Logo />
 
       <div className="user">
         <div className="is-connected">
@@ -45,13 +43,13 @@ const NavbarStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 ${theme.spacing.xl};
   border-radius: 15px 15px 0 0;
 
   .user {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: ${theme.spacing.sm};
 
     .is-connected {
       color: ${theme.colors.greyDark};
