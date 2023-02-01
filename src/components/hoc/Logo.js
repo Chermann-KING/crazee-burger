@@ -23,6 +23,8 @@ export default function Logo({ className }) {
 }
 
 const LogoStyled = styled.div`
+  border: 2px solid green;
+
   z-index: 1;
   width: min-content;
   cursor: pointer;
