@@ -54,6 +54,7 @@ const NavbarStyled = styled.nav`
     gap: 1.2rem;
 
     .is-connected {
+      color: ${theme.colors.greyDark};
       text-align: right;
       p > span {
         color: ${theme.colors.primary_burger};
