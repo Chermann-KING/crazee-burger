@@ -25,9 +25,10 @@ export default function Logo({ className }) {
 const LogoStyled = styled.div`
   z-index: 1;
   width: min-content;
+  cursor: pointer;
+  padding: ${theme.spacing.sm} 0;
 
   h1 {
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
