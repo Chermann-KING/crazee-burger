@@ -41,7 +41,7 @@ const NavbarStyled = styled.nav`
   cursor: default;
   background-color: ${theme.colors.white};
 
-  height: 12vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
