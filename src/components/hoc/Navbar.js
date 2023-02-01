@@ -17,9 +17,7 @@ export default function Navbar() {
 
   return (
     <NavbarStyled>
-      <div className="brand">
-        <Logo className="scale-logo" />
-      </div>
+      <Logo />
 
       <div className="user">
         <div className="is-connected">
