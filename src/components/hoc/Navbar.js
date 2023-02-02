@@ -36,5 +36,6 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 ${theme.spacing.md};
-  border-radius: 15px 15px 0 0;
+  border-radius: ${theme.borderRadius.extraRound}
+    ${theme.borderRadius.extraRound} 0 0;
 `;
