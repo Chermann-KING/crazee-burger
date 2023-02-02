@@ -39,7 +39,6 @@ const UserConnectedStyled = styled.div`
       color: ${theme.colors.greyDark};
       background-color: transparent;
       border: none;
-      margin-top: ${theme.spacing.xxs};
       padding: ${theme.spacing.xxs} 0;
       border-bottom: 1px solid transparent;
 
