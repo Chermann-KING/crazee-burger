@@ -25,6 +25,7 @@ const UserConnectedStyled = styled.div`
   display: flex;
   align-items: center;
   gap: ${theme.spacing.sm};
+  margin-right: ${theme.spacing.xl};
 
   .is-connected {
     color: ${theme.colors.greyDark};
