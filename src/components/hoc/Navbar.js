@@ -35,6 +35,6 @@ const NavbarStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 ${theme.spacing.xl};
+  padding: 0 ${theme.spacing.md};
   border-radius: 15px 15px 0 0;
 `;
