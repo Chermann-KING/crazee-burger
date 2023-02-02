@@ -8,7 +8,9 @@ const MainStyled = styled.main`
   background-color: #f5f5f7;
   /* overflow-y: scroll; */
   height: 85vh;
-  width: 100%;
+  max-width: 1400px;
+  min-width: 410px;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;

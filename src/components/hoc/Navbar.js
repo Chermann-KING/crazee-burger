@@ -40,6 +40,10 @@ const NavbarStyled = styled.nav`
   background-color: ${theme.colors.white};
 
   height: 10vh;
+  max-width: 1400px;
+  min-width: 410px;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;

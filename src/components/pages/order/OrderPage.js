@@ -19,6 +19,7 @@ export default function OrderPage() {
 }
 const OrderPageStyled = styled.div`
   height: 100vh;
+  width: 100vw;
   padding: 1rem 3rem;
   background-color: ${theme.colors.primary_burger};
 `;
