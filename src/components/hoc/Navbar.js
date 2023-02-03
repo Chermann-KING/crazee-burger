@@ -12,12 +12,14 @@ export default function Navbar() {
   const { userName } = useParams();
 
   // Comportement (fonctions)
+  const reload = () => {
+    window.location.reload();
+  };
 
   // Affichage (JSX)
-
   return (
     <NavbarStyled>
-      <Logo />
+      <Logo onClick={reload} className={"pointer"} />
       <UserConnected userName={userName} />
     </NavbarStyled>
   );
@@ -38,4 +40,8 @@ const NavbarStyled = styled.nav`
   padding: 0 ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound} 0 0;
+
+  .pointer {
+    cursor: pointer;
+  }
 `;
