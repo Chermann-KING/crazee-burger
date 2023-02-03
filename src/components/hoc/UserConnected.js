@@ -33,18 +33,20 @@ const UserConnectedStyled = styled.div`
     p > span {
       color: ${theme.colors.primary_burger};
       font-weight: ${theme.weights.bold};
+      font-size: 15px;
     }
     button {
       cursor: pointer;
+      font-size: 10px;
       color: ${theme.colors.greyDark};
       background-color: transparent;
-      border: none;
+
       padding: ${theme.spacing.xxs} 0;
-      border-bottom: 1px solid transparent;
 
       transition: all 0.2s ease;
       :hover {
-        border-bottom: 1px solid ${theme.colors.greyDark};
+        padding-top: 2px;
+        text-decoration: underline;
       }
     }
   }
