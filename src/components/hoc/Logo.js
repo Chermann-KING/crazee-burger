@@ -7,9 +7,9 @@ import picto from "../../assets/images/logo-orange.webp";
 export default function Logo({ className, onClick }) {
   return (
     <LogoStyled className={className} onClick={onClick}>
-      Crazee
+      crazee
       <img src={picto} alt="" aria-hidden="true" />
-      Burger
+      burger
     </LogoStyled>
   );
 }
@@ -23,12 +23,12 @@ const LogoStyled = styled.h1`
   justify-content: center;
 
   font-family: "Amatic SC", cursive;
-  font-size: calc(${theme.fonts.P6}*.5);
+  font-size: calc(${theme.fonts.P6}*.7);
   color: ${theme.colors.primary_burger};
   padding: ${theme.spacing.sm} 0;
 
   img {
-    width: 60px;
+    width: 70px;
     height: auto;
     margin: 0 0.2rem;
   }
