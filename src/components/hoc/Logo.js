@@ -15,6 +15,7 @@ export default function Logo({ className, onClick }) {
 }
 
 const LogoStyled = styled.h1`
+  padding: ${theme.spacing.sm} 0;
   display: flex;
   align-items: center;
   justify-content: center;
