@@ -1,20 +1,25 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import styled from "styled-components";
+import { theme } from "../../../theme/theme";
+import Navbar from "../../hoc/Navbar";
+import Main from "./Main";
 
 export default function OrderPage() {
   // State (état, données)
-  // useParams() est un hook de react-router-dom permettant de récupérer les paramètres de l'URL
-  const { userName } = useParams();
 
   // Comportement (fonctions)
 
   // Affichage (JSX)
   return (
-    <div>
-      <h1>Bonjour {userName}!</h1>
-      <Link to="/">
-        <button>Déconnexion</button>
-      </Link>
-    </div>
+    <OrderPageStyled>
+      <Navbar />
+      <Main />
+    </OrderPageStyled>
   );
 }
+const OrderPageStyled = styled.div`
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem 3rem;
+  background-color: ${theme.colors.primary_burger};
+`;
