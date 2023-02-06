@@ -96,7 +96,7 @@ export const fakeMenu2 = [
   },
   {
     id: 9,
-    imageSource: `${imagesMenu.frites2}`,
+    imageSource: `${imagesMenu.wedges1}`,
     title: "Crispy Potatoes",
     price: 3.7,
     quantity: 0,
