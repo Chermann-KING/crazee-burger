@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../../theme/theme";
 import Button from "../../hoc/Button";
 import { fakeMenu2 } from "../../../data/fakeMenu";
+import { formatPrice } from "../../../utils/maths";
 
 export default function Main() {
   // state (état, données)
@@ -21,7 +22,7 @@ export default function Main() {
             </div>
             <h2>{product.title}</h2>
             <div className="cta-card">
-              <h3 className="price">{product.price}</h3>
+              <h3>{formatPrice(product.price)}</h3>
               <Button label={"Ajouter"} />
             </div>
           </div>
