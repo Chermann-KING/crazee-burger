@@ -1,4 +1,4 @@
-import { imagesMenu } from "../components/pages/order/ImagesMenu";
+import { imagesMenu } from "../components/pages/order/Main/ImagesMenu";
 
 export const fakeMenu1 = [
   {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { theme } from "../../../theme/theme";
-import Button from "../../hoc/Button";
-import { fakeMenu2 } from "../../../data/fakeMenu";
-import { formatPrice } from "../../../utils/maths";
+import { theme } from "../../../../theme/theme";
+import Button from "../../../hoc/Button";
+import { fakeMenu2 } from "../../../../data/fakeMenu";
+import { formatPrice } from "../../../../utils/maths";
 
 export default function Main() {
   // state (état, données)
