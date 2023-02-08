@@ -4,9 +4,9 @@ import { formatPrice } from "../../utils/maths";
 import styled from "styled-components";
 import { theme } from "../../theme/theme";
 
-export default function Card({ key, title, imageSource, price }) {
+export default function Card({ title, imageSource, price }) {
   return (
-    <CardStyled key={key} className="card">
+    <CardStyled className="card">
       <div className="img-card">
         <img src={imageSource} alt={title} />
       </div>
