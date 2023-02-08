@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { theme } from "../../../theme/theme";
 import { BsPersonCircle } from "react-icons/bs";
+import ToggleButton from "../Navbar/ToggleButton";
 
 export default function UserConnected({ userName }) {
   return (
     <UserConnectedStyled>
+      <ToggleButton />
       <div className="is-connected">
         <p>
           Hey, <span>{userName}</span>
@@ -15,7 +17,6 @@ export default function UserConnected({ userName }) {
           <button>Se déconnecter</button>
         </Link>
       </div>
-
       <BsPersonCircle className="icon" />
     </UserConnectedStyled>
   );
@@ -24,10 +25,12 @@ export default function UserConnected({ userName }) {
 const UserConnectedStyled = styled.div`
   display: flex;
   align-items: center;
-  gap: ${theme.spacing.sm};
+  /* gap: ${theme.spacing.sm}; */
   margin-right: ${theme.spacing.xl};
 
   .is-connected {
+    margin: 0 12px 0 50px;
+
     color: ${theme.colors.greyDark};
     text-align: right;
     p > span {
