@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { theme } from "../../../theme/theme";
 import { BsPersonCircle } from "react-icons/bs";
 import ToggleButton from "../Navbar/ToggleButton";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function UserConnected({ userName }) {
+  //state (état, données)
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+
+  //comportement (fonctions)
+  const displayAdminToast = () => {
+    if (!isModeAdmin) {
+      toast("Mode admin activé");
+    }
+    setIsModeAdmin(!isModeAdmin);
+  };
+
+  //affichage (JSX)
   return (
     <UserConnectedStyled>
       <ToggleButton
         labelIfUnchecked="ACTIVER LE MODE ADMIN"
         labelIfChecked="DÉSACTIVER LE MODE ADMIN"
+        onToggle={displayAdminToast}
       />
+      {/* <button>Notify</button>; */}
+      <ToastContainer />
       <div className="is-connected">
         <p>
           Hey, <span>{userName}</span>
