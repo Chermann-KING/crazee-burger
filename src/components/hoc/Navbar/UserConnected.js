@@ -15,7 +15,17 @@ export default function UserConnected({ userName }) {
   //comportement (fonctions)
   const displayAdminToast = () => {
     if (!isModeAdmin) {
-      toast("Mode admin activé");
+      toast.info("Mode admin activé", {
+        // icon: <FaUserSecret size={30} />,
+        theme: "dark",
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
     setIsModeAdmin(!isModeAdmin);
   };
