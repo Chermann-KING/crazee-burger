@@ -8,7 +8,10 @@ import ToggleButton from "../Navbar/ToggleButton";
 export default function UserConnected({ userName }) {
   return (
     <UserConnectedStyled>
-      <ToggleButton />
+      <ToggleButton
+        labelIfUnchecked="ACTIVER LE MODE ADMIN"
+        labelIfChecked="DÉSACTIVER LE MODE ADMIN"
+      />
       <div className="is-connected">
         <p>
           Hey, <span>{userName}</span>
