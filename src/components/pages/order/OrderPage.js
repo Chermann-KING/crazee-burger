@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme/theme";
 import Navbar from "../../hoc/Navbar";
-import Main from "./Main";
+import Main from "./Main/Main";
 
 export default function OrderPage() {
   // State (état, données)

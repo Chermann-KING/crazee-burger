@@ -38,6 +38,7 @@ const NavbarStyled = styled.nav`
   padding: 0 ${theme.spacing.md};
   border-radius: ${theme.borderRadius.extraRound}
     ${theme.borderRadius.extraRound} 0 0;
+  border-bottom: 0.5px solid rgba(111, 115, 126, 0.17);
 
   .pointer {
     cursor: pointer;
