@@ -20,11 +20,19 @@ export default function Card({ title, imageSource, price }) {
 }
 
 const CardStyled = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-rows: 65% 1fr;
+  padding: 20px;
+  padding-bottom: 10px;
+
+  /* display: flex;
   justify-content: flex-end;
   flex-direction: column;
   padding: 20px 20px;
   gap: 20px;
+  width: 240px;
+  height: 330px; */
+
   width: 240px;
   height: 330px;
   background-color: white;
@@ -32,15 +40,22 @@ const CardStyled = styled.div`
   box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
 
   .img-card {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     width: 200px;
-    height: 145px;
+    height: 145px; */
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
 
     img {
-      max-width: 100%;
+      /* max-width: 100%;
       max-height: 100%;
-      align-self: flex-end;
+      align-self: flex-end; */
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
   h2 {
@@ -50,6 +65,7 @@ const CardStyled = styled.div`
     overflow: hidden;
     font-family: "Amatic SC", cursive;
     font-size: 36px;
+    margin-top: -10px;
   }
 
   .cta-card {
