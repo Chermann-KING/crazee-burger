@@ -1,12 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { theme } from "../../theme/theme";
 import { Link } from "react-router-dom";
+import { theme } from "../../../theme/theme";
 import { BsPersonCircle } from "react-icons/bs";
+import ToggleButton from "../Navbar/ToggleButton";
+
+import ToastAdmin from "./ToastAdmin";
+import { toast } from "react-toastify";
 
 export default function UserConnected({ userName }) {
+  //state (état, données)
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+
+  //comportement (fonctions)
+  const displayAdminToast = () => {
+    if (!isModeAdmin) {
+      toast.info("Mode admin activé", {
+        // icon: <FaUserSecret size={30} />,
+        theme: "dark",
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    setIsModeAdmin(!isModeAdmin);
+  };
+
+  //affichage (JSX)
   return (
     <UserConnectedStyled>
+      <ToggleButton
+        labelIfUnchecked="ACTIVER LE MODE ADMIN"
+        labelIfChecked="DÉSACTIVER LE MODE ADMIN"
+        onToggle={displayAdminToast}
+      />
+      {/* <button>Notify</button>; */}
+      <ToastAdmin />
       <div className="is-connected">
         <p>
           Hey, <span>{userName}</span>
@@ -15,7 +48,6 @@ export default function UserConnected({ userName }) {
           <button>Se déconnecter</button>
         </Link>
       </div>
-
       <BsPersonCircle className="icon" />
     </UserConnectedStyled>
   );
@@ -24,10 +56,12 @@ export default function UserConnected({ userName }) {
 const UserConnectedStyled = styled.div`
   display: flex;
   align-items: center;
-  gap: ${theme.spacing.sm};
+  /* gap: ${theme.spacing.sm}; */
   margin-right: ${theme.spacing.xl};
 
   .is-connected {
+    margin: 0 12px 0 50px;
+
     color: ${theme.colors.greyDark};
     text-align: right;
     p > span {

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import Logo from "../hoc/Logo";
-import { theme } from "../../theme/theme";
+import Logo from "../Logo";
+import { theme } from "../../../theme/theme";
 import UserConnected from "./UserConnected";
-import { reload } from "../../utils/window";
+import { reload } from "../../../utils/window";
 
 export default function Navbar() {
   // State (état, données)
